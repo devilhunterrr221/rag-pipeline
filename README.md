@@ -1,3 +1,6 @@
+
+[View this project on GitHub](https://github.com/your-username/rag-pipeline)
+
 # Retrieval-Augmented Generation (RAG) Pipeline
 
 This project is a RAG-based QA system allowing users to upload documents and ask questions over their content using OpenAI's GPT-4.
