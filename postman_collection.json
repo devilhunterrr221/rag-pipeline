@@ -1,0 +1,62 @@
+{
+  "info": {
+    "_postman_id": "your-id",
+    "name": "RAG API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Document",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "sample.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/upload/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["upload"]
+        }
+      }
+    },
+    {
+      "name": "Ask Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "question",
+              "value": "What is the document about?",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/ask/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["ask"]
+        }
+      }
+    }
+  ]
+}
